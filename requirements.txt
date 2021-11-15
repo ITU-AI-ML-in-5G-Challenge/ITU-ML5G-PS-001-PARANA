@@ -1,0 +1,13 @@
+torch_geometric_temporal==0.40
+tensorflow==2.6.0
+tensorboard==2.4.0
+pandas==1.2.4
+torch_geometric==1.7.0
+networkx==2.5.1
+torch==1.8.1
+torch_scatter==2.0.7
+torch-sparse==0.6.9
+matplotlib==3.4.2
+numpy==1.19.4
+tqdm==4.61.0
+urllib3==1.26.5
