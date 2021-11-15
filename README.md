@@ -8,7 +8,9 @@
 
 <h2> This repository includes </h2>
 
-* A report <b>GNNET_2021_report.pdf</b> detailing the solution
+* A report detailing the solution: https://github.com/ITU-AI-ML-in-5G-Challenge/ITU-ML5G-PS-001-PARANA/blob/668daa429e46928801affe4cc1a4a3136280e32f/GNNET_2021_report.pdf
+
+* The presentation slides used for the Graph Neural Networking award ceremony:  https://github.com/ITU-AI-ML-in-5G-Challenge/ITU-ML5G-PS-001-PARANA/blob/668daa429e46928801affe4cc1a4a3136280e32f/Slides-PS-001-ML5G-PARANA.pdf 
 * Scripts for generating a converted dataset with <it>.pt</it> files.
 * 3 Jupyter notebooks: one that imports the scripts and generates the dataset, and one for each model used.
 * Model weights (<it>22_setembro_modelo.pt,29_setembro_modelo.pt</it>) that are loaded inside the notebooks.
