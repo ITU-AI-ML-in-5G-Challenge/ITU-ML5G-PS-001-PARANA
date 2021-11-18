@@ -6,6 +6,12 @@
 <h3>Members:</h3> Bruno Klaus de Aquino Afonso </h2><br/>
 --> A solo effort, it was pretty useful as I needed some more experience with GNN implementation for my PhD. 
 
+
+# Awards Ceremony:
+https://youtu.be/RmiLVl8yBZs?t=634
+[![IMAGE ALT TEXT HERE](http://i3.ytimg.com/vi/RmiLVl8yBZs/maxresdefault.jpg)](https://youtu.be/RmiLVl8yBZs?t=634)
+
+
 <h2> This repository includes </h2>
 
 * A report detailing the solution: https://github.com/ITU-AI-ML-in-5G-Challenge/ITU-ML5G-PS-001-PARANA/blob/668daa429e46928801affe4cc1a4a3136280e32f/GNNET_2021_report.pdf
