@@ -11,6 +11,43 @@
 https://youtu.be/RmiLVl8yBZs?t=634
 [![IMAGE ALT TEXT HERE](http://i3.ytimg.com/vi/RmiLVl8yBZs/maxresdefault.jpg)](https://youtu.be/RmiLVl8yBZs?t=634)
 
+# The problem, summarized
+Graph Neural Networks (GNN) have produced groundbreaking applications in many fields where data is fundamentally structured as graphs (e.g., chemistry, physics, biology, recommender systems). In the field of computer networks, this new type of neural networks is being rapidly adopted for a wide variety of use cases [1], particularly for those involving complex graphs (e.g., performance modeling, routing optimization, resource allocation in wireless networks).
+
+The Graph Neural Networking challenge 2021 brings a fundamental limitation of existing GNNs: their lack of generalization capability to larger graphs. In order to achieve production-ready GNN-based solutions, we need models that can be trained in network testbeds of limited size (e.g., at the vendor’s networking lab), and then be directly ready to operate with guarantees in real customer networks, which are often much larger in number of nodes. In this challenge, participants are asked to design GNN-based models that can be trained on small network scenarios (up to 50 nodes), and after that scale successfully to larger networks not seen before, up to 300 nodes. Solutions with better scalability properties will be the winners.
+
+
+# Our approach, summarized
+
+
+|                            | **Fast Enough?**   | **Has top tier performance?**| **Generalizes to larger graphs?**
+|----------------------------|--------------------|------------------------------------|----------------------------------------|
+| *Analytical*       | :heavy_check_mark: | :x:                           | :heavy_check_mark:   (~12% MAPE)                         |
+| *Packet simulators* | :x: (prohibited)   | :heavy_check_mark:            | :heavy_check_mark:                                 |
+| *RouteNet*          | :heavy_check_mark: | :heavy_check_mark:            | :x:    (>300% MAPE)                              |
+| *Proposed solution* | :heavy_check_mark: | :heavy_check_mark:            | :heavy_check_mark:     (1.27% MAPE)                           |
+
+To understand the solution detailed in this report, it is helpful to look at the previous approaches:
+- Packet simulators were not allowed in the competition in principle due to excessive running times
+- Analytical approaches generalize well and run fast, but they do not offer competitive performance
+- RouteNet is still fast and more performant than analytical approaches, but fails to generalize to larger graphs. 
+
+For our proposed solution, we **extract invariant features from the analytical approach**, and feed them to a GNN. This way, we can **maintain generalization while outperforming the purely analytical** approach. This is done  using a **modified RouteNet architecture**, making use of baseline predictions as features and incorporating Graph Attention (GAT) and Graph Convolutional Gated Recurrent Unit (GconvGRU) layers. 
+
+Initially, we constructed a big model using the most available resources (*model 1*). However, later experiments showed  that we can have a much, much smaller model (*model 2*) and still achieve the same result. The final prediction of the challenge was the average of both models, which yielded a slight improvement. 
+
+
+|                               | **Val. 1** | **Val. 2** | **Val. 3** | **Test** |
+|-------------------------------|-----------------|-----------------|-----------------|---------------|
+| **RouteNet** | ---             | ---             | ---             | >300.0        |
+| **Baseline**             | 12.10           | 9.18            | 9.51             | ?              |
+| **Model 1 w/o baseline** | ---             | ---             | ---             | 22.58         |
+| **Model 1 (Sep 22nd)**   | **2.71**            | 1.33            | **1.65**            | 1.45          |
+| **Model 2 (Sep 29th)**   | 3.61            | **1.17**            | 1.55            | 1.45          |
+| **(Model 1+ Model 2)/2** | ---             | ---             | ---             | **1.27**          |
+
+'---' means did not evaluate on (yet).
+
 
 <h2> This repository includes </h2>
 
