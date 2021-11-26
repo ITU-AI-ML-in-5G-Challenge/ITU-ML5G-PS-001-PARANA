@@ -1,4 +1,6 @@
-<h1> PARANA-GNNChallenge: 1st place solution of Graph Neural Networking Challenge 2021 </h1>
+
+<h2> Improved GNN Generalization to Larger 5G Networks By Fine-Tuning Predictions From Queueing Theory  (working title) </h2> 
+<h3> 1st place solution of Graph Neural Networking Challenge 2021</h3>
 
 <h3>Team:</h3> PaRaNA (<b>Pa</b>ttern <b>R</b>ecognition <b>a</b>nd <b>N</b>etwork <b>A</b>nalysis) <br/>
 --> This is the PaRaNA research group of the Institute of Science and Technology of the <b>Federal University of São Paulo</b>, led by Dr. Lilian Berton.
