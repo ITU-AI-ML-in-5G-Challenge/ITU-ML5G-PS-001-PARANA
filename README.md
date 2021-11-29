@@ -34,7 +34,9 @@ To understand the solution detailed in this report, it is helpful to look at the
 - Analytical approaches generalize well and run fast, but they do not offer competitive performance
 - RouteNet is still fast and more performant than analytical approaches, but fails to generalize to larger graphs. 
 
-For our proposed solution, we **extract invariant features from the analytical approach**, and feed them to a GNN. This way, we can **maintain generalization while outperforming the purely analytical** approach. This is done  using a **modified RouteNet architecture**, making use of baseline predictions as features and incorporating Graph Attention (GAT) and Graph Convolutional Gated Recurrent Unit (GconvGRU) layers. 
+For our proposed solution, we **extract invariant features from the analytical approach**, and feed them to a GNN. This way, we can **maintain generalization while outperforming the purely analytical** approach. This is done  using a **modified RouteNet architecture**, making use of baseline predictions as features and incorporating Graph Attention (GAT) and Graph Convolutional Gated Recurrent Unit (GconvGRU) layers.
+
+![alt text](diagram_light.png)
 
 Initially, we constructed a big model using the most available resources (*model 1*). However, later experiments showed  that we can have a much, much smaller model (*model 2*) and still achieve the same result. The final prediction of the challenge was the average of both models, which yielded a slight improvement. 
 
@@ -55,7 +57,7 @@ Initially, we constructed a big model using the most available resources (*model
 
 * A report detailing the solution: https://github.com/ITU-AI-ML-in-5G-Challenge/ITU-ML5G-PS-001-PARANA/blob/668daa429e46928801affe4cc1a4a3136280e32f/GNNET_2021_report.pdf
 
-* The presentation slides used for the Graph Neural Networking award ceremony:  https://github.com/ITU-AI-ML-in-5G-Challenge/ITU-ML5G-PS-001-PARANA/blob/668daa429e46928801affe4cc1a4a3136280e32f/Slides-PS-001-ML5G-PARANA.pdf 
+* The presentation slides used for the Graph Neural Networking award ceremony:  https://github.com/ITU-AI-ML-in-5G-Challenge/ITU-ML5G-PS-001-PARANA/blob/53a2c890aa7e64a2ccd5a9fbd4a1260bf63dfa87/GNNET_PARANA_slides.pdf
 * Scripts for generating a converted dataset with <it>.pt</it> files.
 * 3 Jupyter notebooks: one that imports the scripts and generates the dataset, and one for each model used.
 * Model weights (<it>22_setembro_modelo.pt,29_setembro_modelo.pt</it>) that are loaded inside the notebooks.
