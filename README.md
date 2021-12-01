@@ -9,6 +9,16 @@
 --> A solo effort, it was pretty useful as I needed some more experience with GNN implementation for my PhD. 
 
 
+<h2> This repository includes </h2>
+
+* A report detailing the solution: https://github.com/ITU-AI-ML-in-5G-Challenge/ITU-ML5G-PS-001-PARANA/blob/668daa429e46928801affe4cc1a4a3136280e32f/GNNET_2021_report.pdf
+
+* The presentation slides used for the Graph Neural Networking award ceremony:  https://github.com/ITU-AI-ML-in-5G-Challenge/ITU-ML5G-PS-001-PARANA/blob/53a2c890aa7e64a2ccd5a9fbd4a1260bf63dfa87/GNNET_PARANA_slides.pdf
+* Scripts for generating a converted dataset with <it>.pt</it> files.
+* 3 Jupyter notebooks: one that imports the scripts and generates the dataset, and one for each model used.
+* Model weights (<it>22_setembro_modelo.pt,29_setembro_modelo.pt</it>) that are loaded inside the notebooks.
+
+
 # Awards Ceremony:
 https://youtu.be/RmiLVl8yBZs?t=634
 [![IMAGE ALT TEXT HERE](http://i3.ytimg.com/vi/RmiLVl8yBZs/maxresdefault.jpg)](https://youtu.be/RmiLVl8yBZs?t=634)
@@ -51,16 +61,6 @@ Initially, we constructed a big model using the most available resources (*model
 | **(Model 1+ Model 2)/2** | ---             | ---             | ---             | **1.27**          |
 
 '---' means did not evaluate on (yet).
-
-
-<h2> This repository includes </h2>
-
-* A report detailing the solution: https://github.com/ITU-AI-ML-in-5G-Challenge/ITU-ML5G-PS-001-PARANA/blob/668daa429e46928801affe4cc1a4a3136280e32f/GNNET_2021_report.pdf
-
-* The presentation slides used for the Graph Neural Networking award ceremony:  https://github.com/ITU-AI-ML-in-5G-Challenge/ITU-ML5G-PS-001-PARANA/blob/53a2c890aa7e64a2ccd5a9fbd4a1260bf63dfa87/GNNET_PARANA_slides.pdf
-* Scripts for generating a converted dataset with <it>.pt</it> files.
-* 3 Jupyter notebooks: one that imports the scripts and generates the dataset, and one for each model used.
-* Model weights (<it>22_setembro_modelo.pt,29_setembro_modelo.pt</it>) that are loaded inside the notebooks.
 
 <h2> Requirements and instructions </h2>
 Optionally, you may want to first read the PDF file that explains our model. The code requires a GPU, we can only guarantee that 10 GB VRAM (such as an RTX 3080) and 16GB of RAM is sufficient to run everything, though in practice it may be a bit less than that. Our framework uses Pytorch 1.8.1. w/ Pytorch Geometric 1.7.0. (+ dependencies, see here how to install https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html). 
